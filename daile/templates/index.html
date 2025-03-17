@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Clases de Baile</title>
+    <!-- Vinculación al archivo CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Selecciona tu tipo de baile y horas de clases</h2>
+        <form method="POST">
+            <label for="baile">¿En qué baile estás interesado?</label>
+            <select name="baile" required>
+                <option value="Salsa">Salsa</option>
+                <option value="Contemporáneo">Contemporáneo</option>
+            </select>
+            <br><br>
+
+            <label for="horas">¿Cuántas horas deseas matricular al mes?</label>
+            <select name="horas" required>
+                <option value="1">1 hora</option>
+                <option value="2">2 horas</option>
+                <option value="3">3 horas</option>
+            </select>
+            <br><br>
+
+            <button type="submit">Calcular Costo</button>
+        </form>
+    </div>
+</body>
+</html>

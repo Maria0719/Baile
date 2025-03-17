@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costo de Clases</title>
+    <!-- Vinculación al archivo CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Resumen de tu inscripción</h2>
+        <p>Baile seleccionado: <b>{{ baile }}</b></p>
+        <p>Horas matriculadas: <b>{{ horas }}</b> horas</p>
+        <div class="costo-total">
+            <p>Costo total del mes: <b>${{ costo_total }}</b> COP</p>
+        </div>
+        <a href="/">Volver</a>
+    </div>
+</body>
+</html>
